@@ -1,0 +1,11 @@
+p.motto{
+    width: clamp(160px, 75%, 640px);
+    color: white;
+    text-align: justify;
+    text-justify:inter-word;
+
+    font-family:'Heebo';
+    font-size: 1.125em;
+
+    border: 1px solid red;
+}

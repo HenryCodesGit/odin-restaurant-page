@@ -1,5 +1,3 @@
-import './style.css';
+import makeDefaultPage from './pages/root.js';
 
-//cosnole.log('what');
-
-console.log('hello world');
+//makeDefaultPage(document.querySelector('body'));
