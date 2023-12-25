@@ -140,16 +140,6 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 
 /***/ }),
 
-/***/ "./src/index.js":
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _pages_root_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./pages/root.js */ \"./src/pages/root.js\");\n\n\n(0,_pages_root_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(document.querySelector('body'));\n\n//# sourceURL=webpack://odin-restaurant-page/./src/index.js?");
-
-/***/ }),
-
 /***/ "./src/pages/contact.js":
 /*!******************************!*\
   !*** ./src/pages/contact.js ***!
@@ -343,7 +333,7 @@ eval("module.exports = __webpack_require__.p + \"4832a6f1b0a28641f2e2.jpg\";\n\n
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			"app": 0
+/******/ 			"root": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -371,7 +361,7 @@ eval("module.exports = __webpack_require__.p + \"4832a6f1b0a28641f2e2.jpg\";\n\n
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/index.js");
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/pages/root.js");
 /******/ 	
 /******/ })()
 ;

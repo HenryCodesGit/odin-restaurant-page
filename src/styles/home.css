@@ -1,11 +1,27 @@
 p.motto{
-    width: clamp(160px, 75%, 640px);
+    width: clamp(250px, 75%, 640px);
     color: white;
-    text-align: justify;
-    text-justify:inter-word;
+    text-align: center;
 
     font-family:'Heebo';
-    font-size: 1.125em;
+    font-size: 1.75em;
+    font-style: italic;
+    background-color: #0007;
+    text-shadow: 0 0 .25em rgb(160, 100, 25);
+    animation: show 150ms 100ms linear forwards;
 
-    border: 1px solid red;
+    /* pre-animation state */
+    opacity: 0;
+}
+
+.profile{
+    height: 360px;
+    animation: show 150ms 100ms linear forwards;
+    opacity: 0;
+}
+
+@keyframes show {
+    100% {
+        opacity: 1;
+      }
 }

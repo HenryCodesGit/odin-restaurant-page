@@ -1,6 +1,15 @@
+//Pages it needs to link to
+import makePageHome from './home.js';
+import makePageMenu from './menu.js';
+import makePageContact from './contact.js';
+const variablePage = {
+    "home": makePageHome,
+    "menu": makePageMenu,
+    "contact": makePageContact,
+}
+
 //The root page contains common items between all the pages
 import '../styles/root.css';
-import '../styles/home.css';
 
 //This function makes all the page contents then assigns it to the inputted parent
 export default function assignPageContents(parent){
@@ -27,8 +36,15 @@ export default function assignPageContents(parent){
             let temp = document.createElement('li');
             temp.classList.add(`${item.toLowerCase()}-button`);
             temp.textContent = item;
-            ul.appendChild(temp);
 
+            temp.addEventListener('click', () => {
+                clearContainer('.content-container');
+                
+                //Call the script
+                variablePage[`${item.toLowerCase()}`](contentContainer);
+            });
+
+            ul.appendChild(temp);
             //TODO: Listeners for each button for custom items
         });
 
@@ -75,4 +91,14 @@ export default function assignPageContents(parent){
     container.appendChild(footer);
 
     parent.appendChild(container);
+}
+
+//This function is used to delete old page contents
+function clearContainer(containerQuery){
+    let container = document.querySelector(containerQuery);
+
+    if(!(container.childNodes)) return;
+    [...container.childNodes].forEach((item) => {
+        container.removeChild(item);
+    })
 }

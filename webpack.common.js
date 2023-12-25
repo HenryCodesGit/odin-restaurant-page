@@ -4,6 +4,10 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: {
     app: './src/index.js',
+    root: './src/pages/root.js',
+    menu: './src/pages/menu.js',
+    home: './src/pages/home.js',
+    contact: './src/pages/contact.js',
     two: './src/two.js',
   },
 
