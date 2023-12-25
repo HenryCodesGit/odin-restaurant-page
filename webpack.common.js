@@ -4,7 +4,9 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: {
     app: './src/index.js',
+    two: './src/two.js',
   },
+
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
@@ -33,7 +35,17 @@ module.exports = {
             filename: 'index.html',
             inject: 'head',
             scriptLoading: 'defer', 
+            chunks: ['app'],
         }
     ),
+    new HTMLWebpackPlugin(
+      {
+          template: './src/two.html',
+          filename: 'two.html',
+          inject: 'head',
+          scriptLoading: 'defer', 
+          chunks: ['two'],
+      }
+  ),
   ]
 };
